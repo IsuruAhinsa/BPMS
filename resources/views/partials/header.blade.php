@@ -16,7 +16,7 @@
                 {{--<li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>--}}
                 <li class="nav-item"><a href="{{ route('gallery') }}" class="nav-link"><span>Gallery</span></a></li>
                 <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link"><span>Contact</span></a></li>
-                <li class="nav-item"><a href="{{ route('login') }}" class="nav-link"><span>Login</span></a></li>
+                <li class="nav-item"><a href="{{ route('login') }}" class="btn btn-dark mt-2"><span>Login</span></a></li>
             </ul>
         </div>
     </div>
