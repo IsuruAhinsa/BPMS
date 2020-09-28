@@ -18,7 +18,7 @@
                 <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link"><span>Contact</span></a></li>
             </ul>
         </div>
-        @if(Auth::guard('player')->check())
+        @auth('player')
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ Auth::guard('player')->user()->first_name . " " . Auth::guard('player')->user()->last_name }}
@@ -34,7 +34,7 @@
             </div>
         @else
             <a href="{{ route('login') }}" class="btn btn-dark"><span>Login</span></a>
-        @endguest
+        @endauth
     </div>
 </nav>
 
