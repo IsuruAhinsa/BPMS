@@ -24,11 +24,31 @@
                     {{ Auth::guard('player')->user()->first_name . " " . Auth::guard('player')->user()->last_name }}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">My Profile</a>
-                    <a class="dropdown-item" href="#">My Team</a>
-                    <a class="dropdown-item" href="#">My Performance</a>
-                    <a class="dropdown-item" href="#">My Matches</a>
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                    <div class="text-center mb-1">
+                        <img src="{{ Voyager::image(Auth::guard('player')->user()->image) }}" alt="{{ Auth::guard('player')->user()->image }}" width="80">
+                        <small>{{ Auth::guard('player')->user()->email }}</small>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <i class="icon icon-user-circle mr-2"></i>
+                        My Profile
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="icon icon-group mr-2"></i>
+                        My Team
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="icon icon-dashboard mr-2"></i>
+                        My Performance
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="icon icon-gamepad mr-2"></i>
+                        My Matches
+                    </a>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        <i class="icon icon-sign-out mr-2"></i>
+                        {{ __('Logout') }}
+                    </a>
                     @include('forms.auth.logout')
                 </div>
             </div>
