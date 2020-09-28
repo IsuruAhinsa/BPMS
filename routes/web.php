@@ -27,3 +27,8 @@ Route::view('coaches', 'coaches')->name('coaches');
 Route::view('contact', 'contact')->name('contact');
 Route::view('gallery', 'gallery')->name('gallery');
 Route::view('schedule', 'schedule')->name('schedule');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

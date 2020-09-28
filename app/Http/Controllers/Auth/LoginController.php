@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -28,6 +30,11 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+    public function guard()
+    {
+        return Auth::guard('player');
+    }
+
     /**
      * Create a new controller instance.
      *
@@ -35,6 +42,36 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest:player')->except('logout');
+    }
+
+    public function showLoginForm()
+    {
+        return view('auth.login', ['url' => '/login']);
+    }
+
+    public function login(Request $request)
+    {
+        // validate login
+        $request->validate([
+            $this->username() => 'required|string',
+            'password' => 'required|string',
+        ]);
+
+        if (Auth::guard('player')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+            return redirect()->intended('/');
+        }
+        return back()->withInput($request->only('email', 'remember'));
+    }
+
+    public function username()
+    {
+        return 'email';
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::guard('player')->logout();
+        return redirect('/login');
     }
 }
