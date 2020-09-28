@@ -23,7 +23,7 @@
                 <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ Auth::guard('player')->user()->first_name . " " . Auth::guard('player')->user()->last_name }}
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                     <div class="text-center mb-1">
                         <img src="{{ Voyager::image(Auth::guard('player')->user()->image) }}" alt="{{ Auth::guard('player')->user()->image }}" width="80">
                         <small>{{ Auth::guard('player')->user()->email }}</small>
