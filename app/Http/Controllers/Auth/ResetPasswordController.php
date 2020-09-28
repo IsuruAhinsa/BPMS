@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Password;
 
 class ResetPasswordController extends Controller
 {
@@ -23,8 +25,25 @@ class ResetPasswordController extends Controller
 
     /**
      * Where to redirect users after resetting their password.
-     *
-     * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    public function redirectPath()
+    {
+        Auth::guard('player')->logout();
+        return '/login';
+    }
+
+    public function __construct()
+    {
+        $this->middleware('guest:player');
+    }
+
+    protected function broker()
+    {
+        return Password::broker('players');
+    }
+
+    protected function guard()
+    {
+        return Auth::guard('player');
+    }
 }

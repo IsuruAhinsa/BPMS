@@ -9,6 +9,7 @@
 
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
+                        <i class="icon icon-check-circle mr-2"></i>
                         {{ session('status') }}
                     </div>
                 @endif
