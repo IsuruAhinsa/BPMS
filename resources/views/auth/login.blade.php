@@ -13,7 +13,7 @@
                 @endif
                 @include('forms.auth.login')
                 @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}" class="btn btn-outline-dark btn-block mt-3">
+                    <a href="{{ route('password.request') }}" class="btn btn-outline-dark btn-block btn-lg mt-3">
                         {{ __('Forgot Your Password?') }}
                     </a>
                 @endif

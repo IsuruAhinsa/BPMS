@@ -60,7 +60,7 @@ class LoginController extends Controller
         ]);
 
         if (Auth::guard('player')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
-            return redirect()->intended('/');
+            return redirect('/');
         }
         return $this->sendFailedLoginResponse($request);
         return back()->withInput($request->only('email', 'remember'));
