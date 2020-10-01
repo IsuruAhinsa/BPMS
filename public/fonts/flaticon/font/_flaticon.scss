@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 04/04/2019 09:46
+    Creation date: 28/09/2020 15:54
     */
 
     @font-face {
@@ -37,26 +37,28 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-body:before { content: "\f100"; }
-.flaticon-diet:before { content: "\f101"; }
-.flaticon-running:before { content: "\f102"; }
-.flaticon-woman:before { content: "\f103"; }
-.flaticon-gym:before { content: "\f104"; }
-.flaticon-meditation:before { content: "\f105"; }
-.flaticon-abs:before { content: "\f106"; }
-.flaticon-scale:before { content: "\f107"; }
-.flaticon-aerobic:before { content: "\f108"; }
-.flaticon-treadmill-machine-with-timer:before { content: "\f109"; }
-.flaticon-check-list:before { content: "\f10a"; }
+    .flaticon-call:before { content: "\f100"; }
+.flaticon-identification:before { content: "\f101"; }
+.flaticon-signpost:before { content: "\f102"; }
+.flaticon-mobile-phone:before { content: "\f103"; }
+.flaticon-cake:before { content: "\f104"; }
+.flaticon-face-detection:before { content: "\f105"; }
+.flaticon-id-card:before { content: "\f106"; }
+.flaticon-mail:before { content: "\f107"; }
+.flaticon-lock:before { content: "\f108"; }
+.flaticon-padlock:before { content: "\f109"; }
+.flaticon-height-limit:before { content: "\f10a"; }
+.flaticon-fitness:before { content: "\f10b"; }
     
-    $font-Flaticon-body: "\f100";
-    $font-Flaticon-diet: "\f101";
-    $font-Flaticon-running: "\f102";
-    $font-Flaticon-woman: "\f103";
-    $font-Flaticon-gym: "\f104";
-    $font-Flaticon-meditation: "\f105";
-    $font-Flaticon-abs: "\f106";
-    $font-Flaticon-scale: "\f107";
-    $font-Flaticon-aerobic: "\f108";
-    $font-Flaticon-treadmill-machine-with-timer: "\f109";
-    $font-Flaticon-check-list: "\f10a";
+    $font-Flaticon-call: "\f100";
+    $font-Flaticon-identification: "\f101";
+    $font-Flaticon-signpost: "\f102";
+    $font-Flaticon-mobile-phone: "\f103";
+    $font-Flaticon-cake: "\f104";
+    $font-Flaticon-face-detection: "\f105";
+    $font-Flaticon-id-card: "\f106";
+    $font-Flaticon-mail: "\f107";
+    $font-Flaticon-lock: "\f108";
+    $font-Flaticon-padlock: "\f109";
+    $font-Flaticon-height-limit: "\f10a";
+    $font-Flaticon-fitness: "\f10b";

@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/', 'IndexController@index')->name('/');
-
+Route::middleware('auth:player')->group(function () {
+    Route::get('profile/edit', 'PlayerProfileController@edit')->name('player.profile.edit');
+    Route::post('profile/{id}', 'PlayerProfileController@update')->name('player.profile.update');
+    Route::get('profile/password/', 'PlayerProfileController@showChangePasswordForm')->name('player.password.edit');
+    Route::post('profile/password/{id}', 'PlayerProfileController@updatePassword')->name('player.password.update');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 

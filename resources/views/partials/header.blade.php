@@ -29,7 +29,7 @@
                         <small>{{ Auth::guard('player')->user()->email }}</small>
                     </div>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{{ route('player.profile.edit') }}">
                         <i class="icon icon-user-circle mr-2"></i>
                         My Profile
                     </a>
