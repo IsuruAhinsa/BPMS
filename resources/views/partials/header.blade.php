@@ -13,7 +13,7 @@
                 <li class="nav-item"><a href="{{ route('schedule') }}" class="nav-link"><span>Schedule</span></a></li>
                 <li class="nav-item"><a href="{{ route('about') }}" class="nav-link"><span>About</span></a></li>
                 <li class="nav-item"><a href="{{ route('coaches') }}" class="nav-link"><span>Coaches</span></a></li>
-                {{--<li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>--}}
+                <li class="nav-item"><a href="{{ route('news.index') }}" class="nav-link"><span>News</span></a></li>
                 <li class="nav-item"><a href="{{ route('gallery') }}" class="nav-link"><span>Gallery</span></a></li>
                 <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link"><span>Contact</span></a></li>
             </ul>

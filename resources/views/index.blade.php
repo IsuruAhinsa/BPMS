@@ -12,6 +12,6 @@
 
     @include('sections.testimony')
 
-    @include('sections.blog')
+    @include('sections.news')
 
 @endsection

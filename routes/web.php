@@ -23,6 +23,10 @@ Route::middleware('auth:player')->group(function () {
     Route::post('profile/password/{id}', 'PlayerProfileController@updatePassword')->name('player.password.update');
 });
 
+Route::get('news', 'NewsController@index')->name('news.index');
+Route::get('news/show/{slug}', 'NewsController@show')->name('news.show');
+Route::get('news/search', 'NewsController@search')->name('news.search');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('about', 'about')->name('about');
